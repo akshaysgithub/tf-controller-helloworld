@@ -3,13 +3,11 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: tf-runner
-  namespace: dev
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: tf-runner-role
-  namespace: dev
 rules:
 - apiGroups:
   - ""
@@ -41,7 +39,6 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: tf-runner-rolebinding
-  namespace: dev
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role

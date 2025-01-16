@@ -3,19 +3,16 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: helloworld-tf
-  namespace: dev
 spec:
   interval: 1m
   url: https://github.com/akshaysgithub/tf-controller-helloworld
   ref:
     branch: main
-
 ---
 apiVersion: infra.contrib.fluxcd.io/v1alpha1
 kind: Terraform
 metadata:
   name: helloworld-tf
-  namespace: dev
 spec:
   path: ./terraform
   approvePlan: "auto"
