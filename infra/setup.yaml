@@ -16,7 +16,7 @@ metadata:
   name: helloworld-tf
   namespace: dev
 spec:
-  path: terraform
+  path: ./terraform
   approvePlan: "auto"
   interval: 1m
   sourceRef:
